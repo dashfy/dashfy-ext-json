@@ -8,8 +8,8 @@ import {
   WidgetHeader,
   WidgetListItem,
   WidgetLoader,
-} from '@dashfy/ui'
-import { get, valueToDisplayString } from '@dashfy/utils'
+} from '@getdashfy/ui'
+import { get, valueToDisplayString } from '@getdashfy/utils'
 import { KeyIcon } from 'lucide-react'
 
 import type { JsonResponse } from '@/types'
@@ -58,51 +58,17 @@ export interface JsonKeysProps {
 }
 
 /**
- * Displays specific key-value pairs extracted from a JSON response.
- * Supports nested property access using dot notation.
- *
- * @example
- * ```json
- * {
- *   "extension": "json",
- *   "widget": "JsonKeys",
- *   "api": "json",
- *   "endpoint": "get",
- *   "title": "User Profile",
- *   "url": "https://api.example.com/user",
- *   "headers": {
- *     "Authorization": "Bearer token"
- *   },
- *   "keys": ["name", "email"]
- * }
- * ```
+ * Displays specific key-value pairs extracted from a JSON response, with dot-notation support for nested properties.
  *
  * @example
  * ```yaml
- * extension: json
- * widget: JsonKeys
- * api: json
- * endpoint: get
- * title: User Profile
- * url: https://api.example.com/user
- * headers:
- *   Authorization: Bearer token
+ * - extension: json
+ *   widget: JsonKeys
+ *   title: User Profile
  *   url: https://api.example.com/user
- * keys:
- *   - name
- *   - email
- * ```
- *
- * @example
- * ```tsx
- * <JsonKeys
- *   api="json"
- *   endpoint="get"
- *   title="User Profile"
- *   url="https://api.example.com/user"
- *   headers={{ Authorization: 'Bearer token' }}
- *   keys={['name', 'email', 'profile.age', 'stats.posts']}
- * />
+ *   keys:
+ *     - name
+ *     - email
  * ```
  */
 export const JsonKeys = ({

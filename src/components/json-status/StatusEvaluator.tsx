@@ -1,5 +1,5 @@
-import { WidgetStatusBadge } from '@dashfy/ui'
-import { get } from '@dashfy/utils'
+import { WidgetStatusBadge } from '@getdashfy/ui'
+import { get } from '@getdashfy/utils'
 
 import { evaluateAssertion, parseAssertion } from '@/utils'
 

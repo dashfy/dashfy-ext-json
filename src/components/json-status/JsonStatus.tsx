@@ -6,7 +6,7 @@ import {
   WidgetErrorBoundary,
   WidgetHeader,
   WidgetLoader,
-} from '@dashfy/ui'
+} from '@getdashfy/ui'
 import { ActivityIcon } from 'lucide-react'
 
 import type { JsonResponse } from '@/types'
@@ -57,65 +57,21 @@ export interface JsonStatusProps {
 }
 
 /**
- * Displays status based on assertions evaluated against JSON data.
- *
- * This widget fetches JSON data from a URL and evaluates a series of assertions
- * against the data. The status displayed is determined by the last matching assertion.
- *
- * @example
- * ```json
- * {
- *   "extension": "json",
- *   "widget": "JsonStatus",
- *   "api": "json",
- *   "endpoint": "get",
- *   "title": "Task Status",
- *   "url": "https://api.example.com/task/1",
- *   "headers": {
- *     "Authorization": "Bearer token"
- *   },
- *   "statuses": [
- *     { "assert": "equals(status, completed)", "status": "success", "label": "Task completed" },
- *     { "assert": "equals(status, pending)", "status": "warning", "label": "Task pending" },
- *     { "assert": "equals(status, failed)", "status": "error", "label": "Task failed" },
- *   ]
- * }
- * ```
+ * Displays a status indicator from assertions evaluated against JSON data (the last matching assertion wins).
  *
  * @example
  * ```yaml
- * extension: json
- * widget: JsonStatus
- * api: json
- * endpoint: get
- * title: Task Status
- * url: "https://api.example.com/task/1"
- * headers:
- *   Authorization: Bearer token
- * statuses:
- *   - assert: equals(status, completed)
- *     status: success
- *     label: Task completed
- *   - assert: equals(status, pending)
- *     status: warning
- *     label: Task pending
- *   - assert: equals(status, failed)
- *     status: error
- *     label: Task failed
- * ```
- *
- * @example
- * ```tsx
- * <JsonStatus
- *   api="json"
- *   endpoint="get"
- *   title="Task Status"
- *   url="https://api.example.com/task/1"
- *   headers={{ Authorization: 'Bearer token' }}
- *   statuses={[
- *     { assert: 'equals(status, completed)', status: 'success', label: 'Task completed' },
- *   ]}
- * />
+ * - extension: json
+ *   widget: JsonStatus
+ *   title: API Health
+ *   url: https://api.example.com/health
+ *   statuses:
+ *     - assert: equals(status, ok)
+ *       status: success
+ *       label: API Online
+ *     - assert: equals(status, degraded)
+ *       status: warning
+ *       label: API Degraded
  * ```
  */
 export const JsonStatus = ({

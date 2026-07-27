@@ -1,4 +1,4 @@
-import { getErrorMessage, stringifyValue } from '@dashfy/utils'
+import { getErrorMessage, stringifyValue } from '@getdashfy/utils'
 
 import type { AssertionType, ParsedAssertion } from './types'
 

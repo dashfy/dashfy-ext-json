@@ -4,8 +4,8 @@ import { describe, expect, it, vi } from 'vitest'
 import type { StatusAssertion } from './StatusEvaluator'
 import { StatusEvaluator } from './StatusEvaluator'
 
-vi.mock('@dashfy/ui', async () => {
-  const actual = await vi.importActual('@dashfy/ui')
+vi.mock('@getdashfy/ui', async () => {
+  const actual = await vi.importActual('@getdashfy/ui')
   return {
     ...actual,
     WidgetStatusBadge: ({ status, label }: { status: string; label?: string }) => (

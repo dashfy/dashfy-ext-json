@@ -31,7 +31,7 @@ describe('createJsonClient', () => {
     expect(() => {
       // @ts-expect-error - Testing missing request
       client({})
-    }).toThrow('@dashfy/ext-json requires the request helper')
+    }).toThrow('@getdashfy/ext-json requires the request helper')
   })
 
   it('should register get endpoint', () => {

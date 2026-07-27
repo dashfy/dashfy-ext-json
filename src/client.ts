@@ -1,5 +1,5 @@
-import type { APIRegistration, RequestOptions } from '@dashfy/types'
-import { getErrorMessage } from '@dashfy/utils'
+import type { APIRegistration, RequestOptions } from '@getdashfy/types'
+import { getErrorMessage } from '@getdashfy/utils'
 
 import { extractJsonPath } from './utils'
 
@@ -24,7 +24,7 @@ export interface JsonClientConfig {
 export interface JsonEndpointConfig extends RequestOptions {
   /**
    * JSONPath expression to extract specific data
-   * @example '$.items[*].name'
+   * @example '$.items[*]'
    */
   path?: string
 }
@@ -40,8 +40,8 @@ export interface JsonEndpointConfig extends RequestOptions {
  *
  * @example
  * ```ts
- * import { Dashfy } from '@dashfy/server'
- * import { createJsonClient } from '@dashfy/ext-json'
+ * import { Dashfy } from '@getdashfy/server'
+ * import { createJsonClient } from '@getdashfy/ext-json'
  *
  * const dashfy = new Dashfy()
  *
@@ -62,7 +62,7 @@ export function createJsonClient(config: JsonClientConfig = {}): APIRegistration
   return ({ logger, request }) => {
     if (!request) {
       throw new Error(
-        '@dashfy/ext-json requires the request helper. Make sure you are using @dashfy/server',
+        '@getdashfy/ext-json requires the request helper. Make sure you are using @getdashfy/server',
       )
     }
 

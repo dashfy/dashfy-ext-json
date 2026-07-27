@@ -6,7 +6,7 @@ import {
   WidgetErrorBoundary,
   WidgetHeader,
   WidgetLoader,
-} from '@dashfy/ui'
+} from '@getdashfy/ui'
 import { FileJsonIcon } from 'lucide-react'
 import * as React from 'react'
 
@@ -50,7 +50,7 @@ export interface CustomJsonProps<T = unknown> {
    * JSONPath expression to extract specific data from the response
    * @example '$.title' - extracts the title field
    * @example '$.items[0]' - extracts the first item
-   * @example '$.items[*].name' - extracts all name fields from items array
+   * @example '$.items[*]' - extracts the entire items array
    */
   path?: string
   /**
@@ -94,91 +94,17 @@ export interface CustomJsonProps<T = unknown> {
 }
 
 /**
- * Displays JSON data from an API with flexible rendering options:
- * - Template strings for HTML rendering
- * - React render functions
- * - Raw JSON display
- *
- * @example
- * ```json
- * {
- *   "extension": "json",
- *   "widget": "CustomJson",
- *   "api": "json",
- *   "endpoint": "get",
- *   "title": "User Profile",
- *   "url": "https://api.example.com/user/1",
- *   "headers": {
- *     "Authorization": "Bearer token"
- *   },
- *   "template": "<h1><%= data.name %></h1>"
- * }
- * ```
+ * Displays JSON data with flexible rendering: an Eta template, a React render function, or raw JSON.
  *
  * @example
  * ```yaml
- * extension: json
- * widget: CustomJson
- * api: json
- * endpoint: get
- * title: User Profile
- * url: https://api.example.com/user/1
- * headers:
- *   Authorization: Bearer token
- * template: <h1><%= data.name %></h1>
- * ```
- *
- * @example
- * ```tsx
- * // Using template string for HTML rendering
- * <CustomJson
- *   api="json"
- *   endpoint="get"
- *   title="User Profile"
- *   url="https://api.example.com/data"
- *   headers={{ Authorization: 'Bearer token' }}
- *   template="<h1><%= data.title %></h1>"
- * />
- *
- * // Using React render function
- * <CustomJson
- *   api="json"
- *   endpoint="get"
- *   title="User Profile"
- *   url="https://api.example.com/data"
- *   headers={{ Authorization: 'Bearer token' }}
- *   render={(data) => <h1>{data.title}</h1>}
- * />
- *
- * // Using transform to process data
- * <CustomJson
- *   api="json"
- *   endpoint="get"
- *   title="React Repository"
- *   url="https://api.github.com/repos/facebook/react"
- *   headers={{ Authorization: 'Bearer token' }}
- *   transform={(data) => ({
- *     name: data.name,
- *     stars: data.stargazers_count,
- *     forks: data.forks_count
- *   })}
- *   render={(data) => (
- *     <div>
- *       <h2>{data.name}</h2>
- *       <p>⭐ {data.stars} stars</p>
- *       <p>🍴 {data.forks} forks</p>
- *     </div>
- *   )}
- * />
- *
- * // Show raw JSON
- * <CustomJson
- *   api="json"
- *   endpoint="get"
- *   title="User Profile"
- *   url="https://api.example.com/data"
- *   showRaw
- * />
+ * - extension: json
+ *   widget: CustomJson
+ *   title: Weather
+ *   url: https://api.example.com/weather
+ *   template: |
+ *     <h2><%= data.city %></h2>
+ *     <p>Temperature: <%= data.temp %>°C</p>
  * ```
  */
 // eslint-disable-next-line react/function-component-definition

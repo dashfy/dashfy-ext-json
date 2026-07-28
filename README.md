@@ -522,14 +522,6 @@ Join the community on [Dashfy's Discord server](https://dashfy.dev/discord) to d
 
 Join the conversation on X (Twitter) and follow [@dashfydev](https://x.com/dashfydev) for updates and announcements.
 
-## Related packages
-
-- [`@getdashfy/server`](https://www.npmjs.com/package/@getdashfy/server) - Dashfy server
-- [`@getdashfy/ui`](https://www.npmjs.com/package/@getdashfy/ui) - Dashfy UI components
-- [`@getdashfy/types`](https://www.npmjs.com/package/@getdashfy/types) - Dashfy TypeScript types
-- [`@getdashfy/ext-github`](https://www.npmjs.com/package/@getdashfy/ext-github) - GitHub extension
-- [`@getdashfy/ext-nba`](https://www.npmjs.com/package/@getdashfy/ext-nba) - NBA extension
-
 ## License
 
 This project is licensed under the AGPL-3.0 License - see the [LICENSE](./LICENSE) file for details.

@@ -70,7 +70,7 @@ dashfy.registerApi(
   createJsonClient({
     baseUrl: 'https://api.example.com',
     headers: { Authorization: `Bearer ${process.env.API_TOKEN}` },
-    timeout: 5000,
+    timeout: 5_000,
   }),
 )
 
@@ -149,8 +149,8 @@ createJsonClient({
     'Content-Type': 'application/json',
   },
 
-  // Request timeout in milliseconds (default: 10000)
-  timeout: 5000,
+  // Request timeout in milliseconds (default: 10_000)
+  timeout: 5_000,
 })
 ```
 
@@ -159,7 +159,6 @@ createJsonClient({
 Use environment variables for sensitive configuration:
 
 ```bash
-# .env
 API_BASE_URL=https://api.example.com
 API_TOKEN=your-secret-token
 ```

@@ -4,7 +4,7 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/dashfy?referralCode=INMsTa&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
-> JSON/REST API extension for [Dashfy](https://github.com/dashfy/dashfy) - Display data from any JSON API with flexible rendering options.
+> JSON extension for [Dashfy](https://github.com/dashfy/dashfy) - Display data from any JSON/REST API with flexible rendering options.
 
 This extension provides widgets to fetch, transform, and visualize JSON data from REST APIs with support for custom templates, status monitoring, and key-value displays.
 

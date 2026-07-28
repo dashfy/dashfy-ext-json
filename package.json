@@ -1,14 +1,14 @@
 {
   "name": "@getdashfy/ext-json",
   "version": "0.1.0",
-  "description": "JSON/REST API extension for Dashfy - Display data from any JSON API with flexible rendering options",
+  "description": "JSON extension for Dashfy - Display data from any JSON/REST API with flexible rendering options",
   "keywords": [
     "dashfy",
     "dashboard",
     "widgets",
     "extension",
     "json",
-    "rest",
+    "rest-api",
     "api"
   ],
   "homepage": "https://github.com/dashfy/dashfy-ext-json#readme",

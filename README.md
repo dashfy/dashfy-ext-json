@@ -392,7 +392,6 @@ statuses:
 ## Complete example
 
 ```yaml
-# dashfy.config.yml
 dashboards:
   - title: API Monitoring
     columns: 3

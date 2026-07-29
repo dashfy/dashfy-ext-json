@@ -389,63 +389,6 @@ statuses:
     label: Service Outage
 ```
 
-## Complete example
-
-```yaml
-dashboards:
-  - title: API Monitoring
-    columns: 3
-    rows: 1
-    widgets:
-      # API status
-      - extension: json
-        widget: JsonStatus
-        title: API Health
-        url: https://api.example.com/health
-        statuses:
-          - assert: equals(status, ok)
-            status: success
-            label: Operational
-          - assert: equals(status, degraded)
-            status: warning
-            label: Degraded
-        x: 0
-        y: 0
-        columns: 1
-        rows: 1
-
-      # Key metrics
-      - extension: json
-        widget: JsonKeys
-        title: Metrics
-        url: https://api.example.com/metrics
-        keys:
-          - requests.total
-          - requests.success
-          - latency.avg
-          - uptime
-        x: 1
-        y: 0
-        columns: 1
-        rows: 1
-
-      # Custom display
-      - extension: json
-        widget: CustomJson
-        title: System Info
-        url: https://api.example.com/system
-        template: |
-          <div>
-            <h3><%= data.name %></h3>
-            <p>Version: <%= data.version %></p>
-            <p>Uptime: <%= data.uptime %> days</p>
-          </div>
-        x: 2
-        y: 0
-        columns: 1
-        rows: 1
-```
-
 ## JSONPath support
 
 The `path` parameter narrows the response before it reaches a widget. This extension implements a **simplified subset** of JSONPath, not the full specification:

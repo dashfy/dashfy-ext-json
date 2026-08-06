@@ -1,5 +1,11 @@
 # @getdashfy/ext-json
 
+## 0.2.0
+
+### Minor Changes
+
+- Require @getdashfy/ui ^0.3.1 and align @getdashfy/types dev dependency.
+
 ## 0.1.0
 
 ### Initial Release

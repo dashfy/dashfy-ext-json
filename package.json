@@ -1,6 +1,6 @@
 {
   "name": "@getdashfy/ext-json",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "JSON extension for Dashfy - Display data from any JSON/REST API with flexible rendering options",
   "keywords": [
     "dashfy",
@@ -113,7 +113,7 @@
     "eta": "^3.5.0"
   },
   "peerDependencies": {
-    "@getdashfy/ui": "^0.2.1",
+    "@getdashfy/ui": "^0.3.1",
     "lucide-react": "^0.454.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -124,8 +124,8 @@
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.1",
     "@eslint/js": "^9.17.0",
-    "@getdashfy/types": "^0.1.1",
-    "@getdashfy/ui": "^0.2.1",
+    "@getdashfy/types": "^0.3.0",
+    "@getdashfy/ui": "^0.3.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.8.6",

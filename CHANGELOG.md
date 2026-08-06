@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
--
+- Require @getdashfy/ui ^0.3.1 and align @getdashfy/types dev dependency.
 
 ## 0.2.0
 
